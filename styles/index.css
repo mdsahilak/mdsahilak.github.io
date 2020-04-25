@@ -1,0 +1,129 @@
+/* HTML Tag Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* ColorSchemes */
+/* background: linear-gradient(129.87deg, #ff8585 0%, #cc5c5c 100%); */
+/* background: linear-gradient(129.87deg, #85deff 0%, #5ea7c1 100%); */
+
+.container-fluid {
+    padding: 3% 10% 2%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+}
+
+/* #projects-link, #contact-link {
+  color: #FF5F58;
+  opacity: 0.7;
+}
+
+#projects-link:hover, #contact-link:hover {
+  opacity: 0.9;
+} */
+
+#web {
+    background: linear-gradient(129.87deg, #ff8585 0%, #cc5c5c 100%);
+    color: white;
+}
+
+#web h1{
+    color: white;
+}
+
+#web p {
+    color: white;
+}
+
+#ios {
+    /* background: linear-gradient(129.87deg, #85deff 0%, #5ea7c1 100%); */
+    background: linear-gradient(124.9deg, #514B4B 0%, #959090 100%);
+    color: white;
+}
+
+#ios h1{
+    color: white;
+}
+
+#ios p {
+    color: white;
+}
+
+
+p {
+  font-weight: 200;
+  font-size: 1rem;
+  color: rgb(146, 143, 143);
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 700;
+    opacity: 0.75;
+}
+
+.navbar-brand:hover {
+    opacity: 1;
+}
+
+.title-heading {
+  font-weight: 700;
+  font-size: 3.5rem;
+  animation: fadeInDown 700ms;
+}
+
+.red-box {
+  margin: 3% 15%;
+  padding: 5%;
+  border-radius: 25px;
+  background: linear-gradient(129.87deg, #ff8585 0%, #cc5c5c 100%);
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.blue-box {
+  margin: 3% 15%;
+  padding: 5%;
+  border-radius: 25px;
+  background: linear-gradient(129.87deg, #85deff 0%, #5ea7c1 100%);
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Section */
+#footer {
+    padding-bottom: 5%;
+}
+
+#footer i {
+  margin: 50px 25px 20px;
+  font-size: 1.5em;
+}
+
+#footer i:hover {
+  animation: pushup-icon 500ms;
+  animation-timing-function: linear;
+}
+
+/* Animations */
+@keyframes pushup-icon {
+  50% {
+    transform: translateY(-5px);
+    font-size: 2rem;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
