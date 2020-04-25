@@ -1,0 +1,51 @@
+/* HTML Tag Styles */
+body {
+    background-color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 3% 10%;
+}
+
+p {
+    font-weight: 200;
+    font-size: 1rem;
+    color: rgb(148, 147, 147);
+}
+
+
+.title-heading {
+    font-weight: 700;
+    font-size: 3.5rem;
+    animation: fadeInDown 500ms;
+}
+
+
+
+/* Footer Section */
+#footer i {
+    margin: 50px 25px 20px;
+    font-size: 1.5em;
+}
+
+#footer i:hover {
+    animation: pushup-icon 500ms;
+    animation-timing-function: linear;
+}
+
+
+/* Animations */
+@keyframes pushup-icon {
+    50% {
+        transform: translateY(-5px);
+        font-size: 2rem;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
