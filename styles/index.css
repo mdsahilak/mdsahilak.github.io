@@ -66,8 +66,8 @@ p {
 }
 
 .title-heading {
-  font-size: 3.5rem;
-  margin-top: 2%;
+  font-size: 3.7rem;
+  margin-top: 3.5%;
 
   animation: fadeInUp 900ms;
 }
@@ -84,6 +84,17 @@ p {
   border-radius: 1%;
 }
 
+.proj-link {
+  color: black;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.proj-link:hover {
+  color: black;
+  text-decoration: none;
+  opacity: 1;
+}
 
 /* Blog Section */
 #blog {
