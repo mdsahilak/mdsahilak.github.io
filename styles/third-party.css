@@ -1,6 +1,6 @@
 
 /* CSS learn-more button -from: https://codepen.io/kathykato/pen/rZRaNe */
-.learn-more {
+.open-app {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -19,7 +19,7 @@
   margin: 25px;
 }
 
-.learn-more .circle {
+.open-app .circle {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
@@ -30,7 +30,7 @@
   background: #282936;
   border-radius: 1.625rem;
 }
-.learn-more .circle .icon {
+.open-app .circle .icon {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -39,7 +39,7 @@
   margin: auto;
   background: #fff;
 }
-.learn-more .circle .icon.arrow {
+.open-app .circle .icon.arrow {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
@@ -47,7 +47,7 @@
   height: 0.125rem;
   background: none;
 }
-.learn-more .circle .icon.arrow::before {
+.open-app .circle .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.25rem;
@@ -59,7 +59,7 @@
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.learn-more .button-text {
+.open-app .button-text {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -76,17 +76,17 @@
   /* text-transform: uppercase; */
 }
 
-.learn-more .circle {
+.open-app .circle {
   width: 100%;
 }
 
-.learn-more:hover .circle .icon.arrow {
+.open-app:hover .circle .icon.arrow {
   background: #fff;
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
-.learn-more:hover .button-text {
+.open-app:hover .button-text {
   color: #fff;
   text-decoration: none;
 }
