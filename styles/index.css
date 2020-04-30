@@ -75,9 +75,9 @@ p {
 }
 
 .title-subtitle {
+  padding: 1.2%;
   animation: fadeInUp 1.5s;
 }
-
 
 /* Project Preview Images */
 .proj-info {
