@@ -80,16 +80,6 @@ p {
 }
 
 /* Project Preview Images */
-.proj-info {
-  margin-bottom: 2%;
-}
-
-.proj-img {
-  width: 100%;
-  box-shadow: 2px 2px 10px gray;
-  border-radius: 1%;
-}
-
 .proj-link {
   color: black;
   font-weight: 400;
@@ -107,23 +97,10 @@ p {
   background: linear-gradient(129.87deg, #ff8585 0%, #cc5c5c 100%);
 }
 
-
-/* Todo-List Section */
-#todo-list {
-  background-color: #fff;
-}
-
-
-/* Newsletter Section */
-#newsletter {
-  background: linear-gradient(127.27deg, #a6a2a2 0%, #625f5f 100%);
-  color: white;
-}
-
 /* Footer Section */
 #footer {
-  padding-top: 2%;
-  padding-bottom: 7%;
+  padding-top: 3%;
+  padding-bottom: 2%;
 }
 
 .icon {
