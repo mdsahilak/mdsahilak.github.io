@@ -99,7 +99,7 @@ p {
 
 /* Footer Section */
 #footer {
-  padding-top: 3%;
+  padding-top: 1%;
   padding-bottom: 2%;
 }
 
@@ -122,6 +122,13 @@ p {
 .icon i:hover {
   transition: font-size 350ms linear;
   font-size: 3.3rem;
+}
+
+.title-heading {
+  font-size: 3.0rem;
+  margin-top: 5%;
+  animation: fadeInUp 1.1s;
+  white-space: nowrap;
 }
 
 #contact-phrase {
