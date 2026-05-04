@@ -18,6 +18,13 @@
 </head>
 
 <body>
+    <!-- Decorative arch frame behind header -->
+    <div class="arch-frame" aria-hidden="true">
+        <div class="arch-outer"></div>
+        <div class="arch-inner"></div>
+        <div class="arch-keystone"></div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -27,13 +34,17 @@
                 </div>
             </div>
         </div>
-        <div class="ornament-divider"></div>
+        <div class="ornament-divider">
+            <span class="ornament-wing"></span>
+            <span class="ornament-diamond"></span>
+            <span class="ornament-wing"></span>
+        </div>
     </header>
 
     <main>
         <section class="projects">
             <div class="container">
-                <h2 class="section-title">Apps</h2>
+                <h2 class="section-title"><span class="section-title-text">Apps</span></h2>
                 <div class="projects-grid">
                     <a href="https://apps.apple.com/app/id1524345488" target="_blank" class="project-card">
                         <span class="project-tag">Featured by Apple</span>
@@ -43,7 +54,7 @@
                     </a>
                 </div>
 
-                <h2 class="section-title section-title-spaced">Landing Pages</h2>
+                <h2 class="section-title section-title-spaced"><span class="section-title-text">Landing Pages</span></h2>
                 <div class="projects-grid">
                     <a href="https://www.shobahotels.com" target="_blank" class="project-card">
                         <h3 class="project-name">Shoba Hotels</h3>
@@ -57,7 +68,7 @@
                     </a>
                 </div>
 
-                <h2 class="section-title section-title-spaced">Open Source</h2>
+                <h2 class="section-title section-title-spaced"><span class="section-title-text">Open Source</span></h2>
                 <div class="projects-grid">
                     <a href="https://github.com/mdsahilak/DecisionTreeClassifier" target="_blank" class="project-card">
                         <span class="project-tag">WWDC21 Winner</span>
@@ -79,11 +90,15 @@
             </div>
         </section>
 
-        <div class="ornament-divider"></div>
+        <div class="ornament-divider">
+            <span class="ornament-wing"></span>
+            <span class="ornament-diamond"></span>
+            <span class="ornament-wing"></span>
+        </div>
 
         <section class="contact">
             <div class="container">
-                <h2 class="section-title">Get in touch</h2>
+                <h2 class="section-title"><span class="section-title-text">Get in touch</span></h2>
                 <div class="contact-grid">
                     <a href="mailto:mdsahilak.dev@gmail.com" class="contact-item">
                         <span class="contact-label">Email</span>
@@ -103,6 +118,11 @@
     </main>
 
     <footer class="footer">
+        <div class="ornament-divider ornament-divider-sm">
+            <span class="ornament-wing"></span>
+            <span class="ornament-diamond"></span>
+            <span class="ornament-wing"></span>
+        </div>
         <div class="container">
             <p>&copy; 2025 Sahil Ak</p>
         </div>
