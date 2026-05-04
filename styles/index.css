@@ -206,6 +206,10 @@ img {
     margin-bottom: 40px;
 }
 
+.section-title-spaced {
+    margin-top: 56px;
+}
+
 .projects {
     padding: 56px 0 72px;
 }
