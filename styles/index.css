@@ -16,6 +16,7 @@
     --bg-green-hover: #254832;
 
     --gold: #c4a265;
+    --gold-dim: #9a7d4e;
     --gold-muted: rgba(196, 162, 101, 0.15);
     --green: #3d7a52;
     --green-rich: #2a5e3b;
@@ -40,6 +41,7 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Mughal jali lattice — interlocking pointed arches / ogee pattern */
 body {
     font-family: var(--font);
     font-size: 16px;
@@ -47,18 +49,7 @@ body {
     color: var(--text);
     background-color: var(--bg);
     background-image:
-        repeating-linear-gradient(
-            90deg,
-            rgba(196, 162, 101, 0.01) 0px,
-            transparent 1px,
-            transparent 60px
-        ),
-        repeating-linear-gradient(
-            180deg,
-            rgba(196, 162, 101, 0.008) 0px,
-            transparent 1px,
-            transparent 120px
-        );
+        url("data:image/svg+xml,%3Csvg width='80' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,50 Q40,0 80,50 Q40,100 0,50' fill='none' stroke='%23c4a265' stroke-width='0.4' opacity='0.04'/%3E%3Cpath d='M-40,0 Q0,-50 40,0 Q0,50 -40,0' fill='none' stroke='%23c4a265' stroke-width='0.4' opacity='0.04'/%3E%3Cpath d='M40,0 Q80,-50 120,0 Q80,50 40,0' fill='none' stroke='%23c4a265' stroke-width='0.4' opacity='0.04'/%3E%3Cpath d='M-40,100 Q0,50 40,100 Q0,150 -40,100' fill='none' stroke='%23c4a265' stroke-width='0.4' opacity='0.04'/%3E%3Cpath d='M40,100 Q80,50 120,100 Q80,150 40,100' fill='none' stroke='%23c4a265' stroke-width='0.4' opacity='0.04'/%3E%3C/svg%3E");
 }
 
 a {
@@ -78,10 +69,79 @@ img {
     padding: 0 24px;
 }
 
+/* ===== Ornamental Divider — Mughal-inspired ===== */
+.ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    position: relative;
+}
+
+.ornament-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(600px, 80%);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-dim) 20%,
+        var(--gold) 50%,
+        var(--gold-dim) 80%,
+        transparent
+    );
+    opacity: 0.2;
+}
+
+.ornament-divider::after {
+    content: '';
+    position: relative;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    opacity: 0.25;
+    transform: rotate(45deg);
+}
+
 /* ===== Header ===== */
 .header {
-    padding: 80px 0 56px;
-    border-bottom: 1px solid var(--border);
+    padding: 80px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mughal pointed arch silhouette behind header */
+.header::before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 400px;
+    background:
+        radial-gradient(ellipse 50% 60% at 50% 100%, rgba(196, 162, 101, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Decorative arch outline */
+.header::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 220px;
+    border: 1px solid rgba(196, 162, 101, 0.05);
+    border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+    border-bottom: none;
+    pointer-events: none;
 }
 
 .header-content {
@@ -90,6 +150,9 @@ img {
     justify-content: space-between;
     gap: 24px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56px;
 }
 
 .name {
@@ -166,15 +229,31 @@ img {
     overflow: hidden;
 }
 
+/* Corner ornament — Mughal floral corner motif */
 .project-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-muted), transparent);
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    background:
+        linear-gradient(225deg, rgba(196, 162, 101, 0.08) 0%, transparent 60%);
+    border-bottom-left-radius: 100%;
     opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    opacity: 0;
+    transform: rotate(45deg);
     transition: opacity var(--transition);
 }
 
@@ -189,6 +268,10 @@ img {
     opacity: 1;
 }
 
+.project-card:hover::after {
+    opacity: 0.3;
+}
+
 .project-card.featured {
     grid-column: 1 / -1;
     background: var(--bg-green);
@@ -196,7 +279,12 @@ img {
 }
 
 .project-card.featured::before {
-    background: linear-gradient(90deg, transparent, rgba(61, 122, 82, 0.4), transparent);
+    background:
+        linear-gradient(225deg, rgba(138, 191, 154, 0.1) 0%, transparent 60%);
+}
+
+.project-card.featured::after {
+    background: #8abf9a;
 }
 
 .project-card.featured:hover {
@@ -260,7 +348,6 @@ img {
 /* ===== Contact ===== */
 .contact {
     padding: 56px 0 72px;
-    border-top: 1px solid var(--border);
 }
 
 .contact-grid {
@@ -278,6 +365,22 @@ img {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    background:
+        linear-gradient(225deg, rgba(196, 162, 101, 0.08) 0%, transparent 60%);
+    border-bottom-left-radius: 100%;
+    opacity: 0;
+    transition: opacity var(--transition);
 }
 
 .contact-item:hover {
@@ -285,6 +388,10 @@ img {
     background: var(--bg-card-hover);
     transform: translateY(-2px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.contact-item:hover::before {
+    opacity: 1;
 }
 
 .contact-label {
@@ -304,7 +411,26 @@ img {
 /* ===== Footer ===== */
 .footer {
     padding: 32px 0;
-    border-top: 1px solid var(--border);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(600px, 80%);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-dim) 20%,
+        var(--gold) 50%,
+        var(--gold-dim) 80%,
+        transparent
+    );
+    opacity: 0.15;
 }
 
 .footer p {
@@ -336,12 +462,19 @@ img {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .header {
-        padding: 56px 0 40px;
+        padding: 56px 0 0;
+    }
+
+    .header::after {
+        width: 200px;
+        height: 160px;
+        top: -60px;
     }
 
     .header-content {
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 40px;
     }
 
     .name {
