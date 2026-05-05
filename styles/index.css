@@ -323,7 +323,6 @@ img {
     transition: all var(--transition);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
 }
 
 /* Inner pietra-dura frame: thin double border with corner florets, hugging the iwan arch */
@@ -366,7 +365,6 @@ img {
     background: linear-gradient(165deg, var(--bg-card-hover) 0%, rgba(90, 122, 78, 0.08) 100%);
     border-color: var(--border-hover);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
 }
 
 .project-card:hover::before {
