@@ -45,15 +45,15 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Mughal jali lattice in phthalo green */
+/* Dense botanical wallpaper */
 body {
     font-family: var(--font);
     font-size: 16px;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--bg);
-    background-image:
-        url("data:image/svg+xml,%3Csvg width='60' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 Q30,0 60,40 Q30,80 0,40' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M-30,0 Q0,-40 30,0 Q0,40 -30,0' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M30,0 Q60,-40 90,0 Q60,40 30,0' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M-30,80 Q0,40 30,80 Q0,120 -30,80' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M30,80 Q60,40 90,80 Q60,120 30,80' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Ccircle cx='30' cy='40' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='60' cy='0' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='0' cy='80' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='60' cy='80' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
+    background-image: url("../images/botanical.svg");
+    background-size: 400px 400px;
 }
 
 a {

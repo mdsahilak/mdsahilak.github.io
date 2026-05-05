@@ -1,0 +1,191 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .s { fill: none; stroke: #5a7a4e; stroke-linecap: round; stroke-linejoin: round; }
+      .f { fill: #5a7a4e; stroke: none; }
+    </style>
+  </defs>
+
+  <!-- === ROW 1: Large crashing wave === -->
+  <g opacity="0.10">
+    <!-- Main wave body -->
+    <path class="s" stroke-width="1.2" d="M-10,55 Q30,50 60,40 Q90,28 110,20 Q130,14 145,18 Q155,22 158,35 Q160,48 150,58 Q138,68 120,70"/>
+    <!-- Curling crest -->
+    <path class="s" stroke-width="1" d="M145,18 Q152,12 158,14 Q164,18 162,28 Q158,38 148,42"/>
+    <!-- Inner curl spiral -->
+    <path class="s" stroke-width="0.7" d="M155,20 Q160,22 158,30 Q154,36 148,35"/>
+    <path class="s" stroke-width="0.5" d="M155,25 Q157,28 154,32"/>
+    <!-- Spray droplets -->
+    <circle class="f" cx="162" cy="10" r="1.2" opacity="0.4"/>
+    <circle class="f" cx="168" cy="14" r="0.8" opacity="0.3"/>
+    <circle class="f" cx="158" cy="8" r="0.9" opacity="0.35"/>
+    <circle class="f" cx="165" cy="6" r="0.6" opacity="0.25"/>
+    <circle class="f" cx="170" cy="18" r="0.7" opacity="0.3"/>
+    <!-- Foam lines under crest -->
+    <path class="s" stroke-width="0.4" d="M120,68 Q130,62 140,64 Q148,68 142,72"/>
+    <path class="s" stroke-width="0.4" d="M108,72 Q118,68 128,70 Q135,74 125,76"/>
+    <path class="s" stroke-width="0.3" d="M130,58 Q138,54 144,56"/>
+  </g>
+
+  <!-- Texture lines within wave body row 1 -->
+  <g opacity="0.06">
+    <path class="s" stroke-width="0.4" d="M0,58 Q25,54 50,48 Q75,40 95,34"/>
+    <path class="s" stroke-width="0.3" d="M10,62 Q35,58 55,52 Q78,44 100,38"/>
+    <path class="s" stroke-width="0.3" d="M5,66 Q30,64 50,60 Q70,54 85,50"/>
+    <path class="s" stroke-width="0.25" d="M20,70 Q40,68 55,64 Q70,60 82,56"/>
+  </g>
+
+  <!-- Foam / whitewash after row 1 -->
+  <g opacity="0.05">
+    <path class="s" stroke-width="0.5" d="M120,78 Q140,74 160,78 Q180,82 200,78"/>
+    <path class="s" stroke-width="0.4" d="M140,82 Q160,78 180,82 Q200,86 215,82"/>
+    <path class="s" stroke-width="0.3" d="M160,86 Q175,83 190,86 Q205,89 218,86"/>
+    <!-- Foam dots -->
+    <circle class="f" cx="135" cy="80" r="0.8" opacity="0.3"/>
+    <circle class="f" cx="155" cy="84" r="0.6" opacity="0.25"/>
+    <circle class="f" cx="175" cy="80" r="0.7" opacity="0.3"/>
+    <circle class="f" cx="195" cy="84" r="0.5" opacity="0.2"/>
+  </g>
+
+  <!-- === ROW 2: Medium rolling wave === -->
+  <g opacity="0.08">
+    <path class="s" stroke-width="1" d="M200,130 Q230,125 260,115 Q285,105 305,100 Q320,96 330,100 Q338,106 338,118 Q335,128 322,134 Q310,138 295,136"/>
+    <!-- Curl -->
+    <path class="s" stroke-width="0.8" d="M330,100 Q336,95 340,98 Q343,104 340,112 Q336,118 328,118"/>
+    <path class="s" stroke-width="0.5" d="M335,102 Q338,106 336,112 Q332,116 328,114"/>
+    <path class="s" stroke-width="0.4" d="M335,106 Q336,110 333,113"/>
+    <!-- Spray -->
+    <circle class="f" cx="342" cy="92" r="1" opacity="0.35"/>
+    <circle class="f" cx="346" cy="96" r="0.7" opacity="0.3"/>
+    <circle class="f" cx="339" cy="89" r="0.8" opacity="0.3"/>
+    <!-- Foam -->
+    <path class="s" stroke-width="0.4" d="M295,134 Q305,130 315,132 Q325,136 315,140"/>
+    <path class="s" stroke-width="0.3" d="M285,138 Q295,135 305,137 Q312,140 305,142"/>
+  </g>
+
+  <!-- Texture lines row 2 -->
+  <g opacity="0.05">
+    <path class="s" stroke-width="0.4" d="M200,134 Q225,130 250,122 Q275,114 295,108"/>
+    <path class="s" stroke-width="0.3" d="M210,138 Q235,134 258,126 Q280,118 300,112"/>
+    <path class="s" stroke-width="0.25" d="M215,142 Q238,140 255,134 Q272,128 288,122"/>
+  </g>
+
+  <!-- === ROW 3: Smaller wave, left side === -->
+  <g opacity="0.09">
+    <path class="s" stroke-width="0.9" d="M-10,210 Q20,205 50,195 Q75,185 92,180 Q105,176 112,180 Q118,186 116,196 Q112,204 100,208 Q88,210 78,208"/>
+    <!-- Curl -->
+    <path class="s" stroke-width="0.7" d="M112,180 Q118,175 122,178 Q125,184 122,192 Q118,198 110,198"/>
+    <path class="s" stroke-width="0.4" d="M116,182 Q120,186 118,192 Q114,196 110,194"/>
+    <path class="s" stroke-width="0.3" d="M117,186 Q118,190 116,193"/>
+    <!-- Spray -->
+    <circle class="f" cx="124" cy="172" r="0.9" opacity="0.35"/>
+    <circle class="f" cx="120" cy="170" r="0.6" opacity="0.25"/>
+    <circle class="f" cx="128" cy="176" r="0.7" opacity="0.3"/>
+    <!-- Foam -->
+    <path class="s" stroke-width="0.3" d="M78,206 Q88,202 98,204 Q106,208 98,210"/>
+    <path class="s" stroke-width="0.3" d="M68,210 Q78,208 88,210"/>
+  </g>
+
+  <!-- Texture lines row 3 -->
+  <g opacity="0.05">
+    <path class="s" stroke-width="0.3" d="M0,214 Q20,210 40,204 Q60,196 80,190"/>
+    <path class="s" stroke-width="0.25" d="M5,218 Q25,216 42,210 Q60,204 75,198"/>
+    <path class="s" stroke-width="0.25" d="M10,222 Q28,220 45,216 Q58,210 68,206"/>
+  </g>
+
+  <!-- Foam wash row 3 -->
+  <g opacity="0.04">
+    <path class="s" stroke-width="0.4" d="M78,216 Q100,212 125,216 Q148,220 170,216"/>
+    <path class="s" stroke-width="0.3" d="M90,220 Q115,216 135,220 Q155,224 175,220"/>
+    <circle class="f" cx="95" cy="218" r="0.6" opacity="0.25"/>
+    <circle class="f" cx="120" cy="220" r="0.5" opacity="0.2"/>
+    <circle class="f" cx="148" cy="218" r="0.5" opacity="0.2"/>
+  </g>
+
+  <!-- === ROW 4: Big crashing wave, right === -->
+  <g opacity="0.10">
+    <path class="s" stroke-width="1.1" d="M180,295 Q215,288 250,275 Q280,262 305,252 Q325,244 340,248 Q350,254 350,268 Q348,280 335,288 Q320,294 305,292"/>
+    <!-- Curl -->
+    <path class="s" stroke-width="0.9" d="M340,248 Q348,242 354,245 Q358,252 356,264 Q350,274 340,274"/>
+    <path class="s" stroke-width="0.6" d="M348,250 Q354,254 352,264 Q346,272 340,270"/>
+    <path class="s" stroke-width="0.4" d="M350,256 Q352,262 348,268"/>
+    <!-- Spray -->
+    <circle class="f" cx="356" cy="238" r="1.2" opacity="0.4"/>
+    <circle class="f" cx="360" cy="242" r="0.8" opacity="0.3"/>
+    <circle class="f" cx="352" cy="236" r="0.7" opacity="0.3"/>
+    <circle class="f" cx="364" cy="246" r="0.6" opacity="0.25"/>
+    <circle class="f" cx="358" cy="234" r="0.5" opacity="0.2"/>
+    <!-- Foam lines -->
+    <path class="s" stroke-width="0.4" d="M305,290 Q315,286 325,288 Q335,292 325,296"/>
+    <path class="s" stroke-width="0.4" d="M290,294 Q302,290 312,292 Q320,296 312,298"/>
+    <path class="s" stroke-width="0.3" d="M280,296 Q292,294 300,296"/>
+  </g>
+
+  <!-- Texture lines row 4 -->
+  <g opacity="0.06">
+    <path class="s" stroke-width="0.4" d="M185,298 Q215,294 245,284 Q270,274 295,264"/>
+    <path class="s" stroke-width="0.3" d="M190,302 Q220,298 248,288 Q275,278 300,268"/>
+    <path class="s" stroke-width="0.25" d="M200,306 Q225,304 248,296 Q268,288 285,280"/>
+    <path class="s" stroke-width="0.25" d="M210,310 Q232,308 250,302 Q265,296 278,290"/>
+  </g>
+
+  <!-- === Gentle swells between waves === -->
+  <g opacity="0.04">
+    <!-- Between row 1 and 2 -->
+    <path class="s" stroke-width="0.5" d="M0,95 Q50,88 100,92 Q150,96 200,90 Q250,84 300,90 Q350,96 400,90"/>
+    <path class="s" stroke-width="0.3" d="M0,102 Q60,96 120,100 Q180,104 240,98 Q300,92 360,98 Q380,100 400,98"/>
+    <!-- Between row 2 and 3 -->
+    <path class="s" stroke-width="0.5" d="M0,165 Q50,158 100,162 Q150,166 200,160 Q250,154 300,160 Q350,166 400,160"/>
+    <path class="s" stroke-width="0.3" d="M0,172 Q55,166 110,170 Q165,174 220,168 Q275,162 330,168 Q370,172 400,168"/>
+    <!-- Between row 3 and 4 -->
+    <path class="s" stroke-width="0.5" d="M0,245 Q50,238 100,242 Q150,246 200,240 Q250,234 300,240 Q350,246 400,240"/>
+    <path class="s" stroke-width="0.3" d="M0,252 Q60,246 120,250 Q180,254 240,248 Q300,242 360,248 Q380,250 400,248"/>
+  </g>
+
+  <!-- === ROW 5: Wave wrapping to tile seamlessly === -->
+  <g opacity="0.08">
+    <path class="s" stroke-width="0.9" d="M-10,365 Q25,358 55,348 Q80,338 98,332 Q112,328 120,332 Q126,338 124,348 Q120,356 108,360 Q96,362 85,360"/>
+    <!-- Curl -->
+    <path class="s" stroke-width="0.6" d="M120,332 Q126,327 130,330 Q133,336 130,344 Q126,350 118,350"/>
+    <path class="s" stroke-width="0.4" d="M124,334 Q128,338 126,344 Q122,348 118,346"/>
+    <!-- Spray -->
+    <circle class="f" cx="132" cy="324" r="0.8" opacity="0.3"/>
+    <circle class="f" cx="128" cy="322" r="0.6" opacity="0.25"/>
+    <!-- Foam -->
+    <path class="s" stroke-width="0.3" d="M85,358 Q95,354 105,356 Q112,360 105,362"/>
+  </g>
+
+  <!-- Texture lines row 5 -->
+  <g opacity="0.05">
+    <path class="s" stroke-width="0.3" d="M0,368 Q20,364 40,358 Q60,350 78,344"/>
+    <path class="s" stroke-width="0.25" d="M5,372 Q22,370 38,364 Q55,358 70,352"/>
+  </g>
+
+  <!-- Bottom foam wash (tiles into top) -->
+  <g opacity="0.04">
+    <path class="s" stroke-width="0.4" d="M85,368 Q110,364 140,368 Q170,372 200,368 Q230,364 260,368"/>
+    <path class="s" stroke-width="0.3" d="M100,374 Q130,370 155,374 Q180,378 210,374"/>
+    <!-- Swells near bottom -->
+    <path class="s" stroke-width="0.4" d="M0,388 Q50,382 100,386 Q150,390 200,384 Q250,378 300,384 Q350,390 400,384"/>
+    <path class="s" stroke-width="0.3" d="M0,395 Q60,390 120,394 Q180,398 240,392 Q300,386 360,392 Q380,394 400,392"/>
+  </g>
+
+  <!-- === Scattered seafoam and mist throughout === -->
+  <g opacity="0.03">
+    <!-- Tiny foam clusters -->
+    <circle class="f" cx="30" cy="82" r="0.8"/>
+    <circle class="f" cx="35" cy="85" r="0.5"/>
+    <circle class="f" cx="180" cy="150" r="0.7"/>
+    <circle class="f" cx="185" cy="153" r="0.5"/>
+    <circle class="f" cx="60" cy="230" r="0.8"/>
+    <circle class="f" cx="65" cy="233" r="0.5"/>
+    <circle class="f" cx="250" cy="310" r="0.7"/>
+    <circle class="f" cx="255" cy="313" r="0.5"/>
+    <circle class="f" cx="350" cy="160" r="0.6"/>
+    <circle class="f" cx="10" cy="320" r="0.7"/>
+    <circle class="f" cx="380" cy="350" r="0.6"/>
+    <circle class="f" cx="200" cy="230" r="0.7"/>
+    <circle class="f" cx="320" cy="180" r="0.5"/>
+    <circle class="f" cx="150" cy="280" r="0.6"/>
+  </g>
+</svg>
