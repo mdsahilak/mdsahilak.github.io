@@ -316,39 +316,50 @@ img {
 .project-card {
     display: flex;
     flex-direction: column;
-    padding: 28px 28px 24px;
+    padding: 56px 32px 28px;
     background: linear-gradient(165deg, var(--bg-card) 0%, rgba(90, 122, 78, 0.04) 100%);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: 110px 110px var(--radius-lg) var(--radius-lg) / 60px 60px var(--radius-lg) var(--radius-lg);
     transition: all var(--transition);
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
 }
 
-/* Jali pattern overlay on cards */
+/* Inner pietra-dura frame: thin double border with corner florets, hugging the iwan arch */
 .project-card::before {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid rgba(90, 122, 78, 0.18);
+    border-radius: 96px 96px calc(var(--radius-lg) - 6px) calc(var(--radius-lg) - 6px) / 52px 52px calc(var(--radius-lg) - 6px) calc(var(--radius-lg) - 6px);
     background-image:
-        url("data:image/svg+xml,%3Csvg width='40' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,25 Q20,0 40,25 Q20,50 0,25' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
-    opacity: 0;
-    transition: opacity 0.4s ease;
+        url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235a7a4e' stroke-width='0.6' opacity='0.55'%3E%3Cpath d='M2,12 Q6,8 10,12 Q6,16 2,12'/%3E%3Cpath d='M22,12 Q18,8 14,12 Q18,16 22,12'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%235a7a4e' stroke-width='0.6' opacity='0.55'%3E%3Cpath d='M12,2 Q8,6 12,10 Q16,6 12,2'/%3E%3Cpath d='M12,22 Q8,18 12,14 Q16,18 12,22'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: bottom left, bottom right;
+    background-repeat: no-repeat, no-repeat;
     pointer-events: none;
-    border-radius: inherit;
+    transition: border-color var(--transition);
 }
 
-/* Soft inner glow on hover */
+/* Floral pietra-dura cartouche at the iwan crown */
 .project-card::after {
     content: '';
     position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    box-shadow: inset 0 1px 0 rgba(90, 122, 78, 0.1);
-    opacity: 0;
-    transition: opacity var(--transition);
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 32px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 32'%3E%3Cg fill='none' stroke='%235a7a4e' stroke-width='1' stroke-linecap='round'%3E%3Cpath d='M70 4 C 60 10 50 10 40 6 M70 4 C 80 10 90 10 100 6' opacity='0.7'/%3E%3Cpath d='M40 6 Q 30 8 22 14' opacity='0.55'/%3E%3Cpath d='M100 6 Q 110 8 118 14' opacity='0.55'/%3E%3Cpath d='M70 4 L 70 14' opacity='0.6'/%3E%3Cpath d='M55 8 Q 50 14 55 18 Q 60 14 55 8 Z' opacity='0.6'/%3E%3Cpath d='M85 8 Q 80 14 85 18 Q 90 14 85 8 Z' opacity='0.6'/%3E%3Ccircle cx='70' cy='16' r='3' opacity='0.7'/%3E%3Ccircle cx='70' cy='16' r='1.2' fill='%235a7a4e' stroke='none' opacity='0.85'/%3E%3Ccircle cx='30' cy='14' r='1.6' fill='%23a06b3a' stroke='none' opacity='0.6'/%3E%3Ccircle cx='110' cy='14' r='1.6' fill='%23a06b3a' stroke='none' opacity='0.6'/%3E%3Cpath d='M14 18 Q 70 26 126 18' opacity='0.45'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
     pointer-events: none;
+    opacity: 0.85;
+    transition: opacity var(--transition), transform var(--transition);
 }
 
 .project-card:hover {
@@ -359,11 +370,12 @@ img {
 }
 
 .project-card:hover::before {
-    opacity: 1;
+    border-color: rgba(90, 122, 78, 0.32);
 }
 
 .project-card:hover::after {
     opacity: 1;
+    transform: translateX(-50%) scale(1.04);
 }
 
 .project-tag {
@@ -411,185 +423,22 @@ img {
     z-index: 1;
 }
 
-/* Picket fence */
-.fence {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    position: relative;
-    max-width: 520px;
-    margin: 0 auto;
-}
-
-.fence-rail {
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(
-        180deg,
-        #c4a882 0%,
-        #b89b74 40%,
-        #a88d66 100%
-    );
-    border-radius: 2px;
-    position: relative;
-    z-index: 2;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.fence-rail::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 30px,
-        rgba(0, 0, 0, 0.08) 30px,
-        rgba(0, 0, 0, 0.08) 31px
-    );
-    border-radius: inherit;
-}
-
-.fence-pickets {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.picket {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    max-width: 240px;
-    text-decoration: none;
-    color: inherit;
-    transition: transform var(--transition);
-    position: relative;
-}
-
-.picket:hover {
-    transform: translateY(-4px);
-}
-
-.picket-point {
-    display: block;
-    width: 100%;
-    height: 28px;
-    background: linear-gradient(
-        180deg,
-        #c4a882 0%,
-        #b89b74 100%
-    );
-    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-    position: relative;
-    margin-bottom: -1px;
-}
-
-.picket-point::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 8px,
-        rgba(0, 0, 0, 0.06) 8px,
-        rgba(0, 0, 0, 0.06) 9px
-    );
-    clip-path: inherit;
-}
-
-.picket-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 32px 16px;
-    background: linear-gradient(
-        180deg,
-        #c4a882 0%,
-        #b89b74 30%,
-        #ad8f68 100%
-    );
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
+.contact-link-wrap {
     text-align: center;
 }
 
-/* Wood grain texture */
-.picket-body::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        180deg,
-        transparent,
-        transparent 6px,
-        rgba(0, 0, 0, 0.04) 6px,
-        rgba(0, 0, 0, 0.04) 7px
-    );
-    pointer-events: none;
-}
-
-/* Vertical grain lines */
-.picket-body::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 8px,
-        rgba(0, 0, 0, 0.06) 8px,
-        rgba(0, 0, 0, 0.06) 9px
-    );
-    pointer-events: none;
-}
-
-.picket:hover .picket-body {
-    background: linear-gradient(
-        180deg,
-        #d0b590 0%,
-        #c4a882 30%,
-        #b89b74 100%
-    );
-}
-
-.picket:hover .picket-point {
-    background: linear-gradient(
-        180deg,
-        #d0b590 0%,
-        #c4a882 100%
-    );
-}
-
-.contact-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(60, 40, 20, 0.5);
-    position: relative;
-    z-index: 1;
-}
-
-.contact-value {
-    font-size: 13px;
-    color: #3a2510;
+.contact-link {
+    font-size: 16px;
     font-weight: 500;
-    word-break: break-all;
-    position: relative;
-    z-index: 1;
+    color: var(--green-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: color var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--green-bright);
 }
 
 /* ===== Footer ===== */
