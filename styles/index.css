@@ -8,29 +8,29 @@
 }
 
 :root {
-    --bg: #0c0a08;
-    --bg-surface: #13110e;
-    --bg-card: #18150f;
-    --bg-card-hover: #1e1b14;
+    --bg: #f5f2ed;
+    --bg-surface: #edeae4;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fafaf8;
 
-    --green: #6b8a5e;
-    --green-bright: #7a9b68;
-    --green-dim: #556e4a;
-    --green-muted: rgba(107, 138, 94, 0.18);
-    --green-glow: rgba(107, 138, 94, 0.07);
-    --green-text: #94b585;
+    --green: #5a7a4e;
+    --green-bright: #4a6b3e;
+    --green-dim: #6b8a5e;
+    --green-muted: rgba(90, 122, 78, 0.12);
+    --green-glow: rgba(90, 122, 78, 0.05);
+    --green-text: #4a6b3e;
 
-    --text: #ede8e0;
-    --text-secondary: #a09688;
-    --text-muted: #5e554a;
+    --text: #1a1714;
+    --text-secondary: #5e564c;
+    --text-muted: #9a9185;
 
-    --border: rgba(107, 138, 94, 0.15);
-    --border-hover: rgba(122, 155, 104, 0.3);
-    --border-subtle: rgba(255, 255, 255, 0.04);
+    --border: rgba(90, 122, 78, 0.2);
+    --border-hover: rgba(90, 122, 78, 0.4);
+    --border-subtle: rgba(0, 0, 0, 0.06);
 
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(107, 138, 94, 0.06);
-    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 48px rgba(107, 138, 94, 0.05);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 64px rgba(107, 138, 94, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 48px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1), 0 0 64px rgba(0, 0, 0, 0.04);
 
     --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
@@ -53,7 +53,7 @@ body {
     color: var(--text);
     background-color: var(--bg);
     background-image:
-        url("data:image/svg+xml,%3Csvg width='60' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 Q30,0 60,40 Q30,80 0,40' fill='none' stroke='%236b8a5e' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M-30,0 Q0,-40 30,0 Q0,40 -30,0' fill='none' stroke='%236b8a5e' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M30,0 Q60,-40 90,0 Q60,40 30,0' fill='none' stroke='%236b8a5e' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M-30,80 Q0,40 30,80 Q0,120 -30,80' fill='none' stroke='%236b8a5e' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M30,80 Q60,40 90,80 Q60,120 30,80' fill='none' stroke='%236b8a5e' stroke-width='0.5' opacity='0.06'/%3E%3Ccircle cx='30' cy='40' r='3' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3Ccircle cx='0' cy='0' r='3' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3Ccircle cx='60' cy='0' r='3' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3Ccircle cx='0' cy='80' r='3' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3Ccircle cx='60' cy='80' r='3' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
+        url("data:image/svg+xml,%3Csvg width='60' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 Q30,0 60,40 Q30,80 0,40' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M-30,0 Q0,-40 30,0 Q0,40 -30,0' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M30,0 Q60,-40 90,0 Q60,40 30,0' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M-30,80 Q0,40 30,80 Q0,120 -30,80' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M30,80 Q60,40 90,80 Q60,120 30,80' fill='none' stroke='%235a7a4e' stroke-width='0.5' opacity='0.08'/%3E%3Ccircle cx='30' cy='40' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='60' cy='0' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='0' cy='80' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='60' cy='80' r='3' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
 }
 
 a {
@@ -93,7 +93,7 @@ img {
     transform: translateX(-50%);
     width: 600px;
     height: 340px;
-    border: 1px solid rgba(107, 138, 94, 0.06);
+    border: 1px solid rgba(90, 122, 78, 0.1);
     border-radius: 50% 50% 0 0 / 65% 65% 0 0;
     border-bottom: none;
 }
@@ -105,7 +105,7 @@ img {
     transform: translateX(-50%);
     width: 520px;
     height: 290px;
-    border: 1px solid rgba(107, 138, 94, 0.04);
+    border: 1px solid rgba(90, 122, 78, 0.06);
     border-radius: 50% 50% 0 0 / 70% 70% 0 0;
     border-bottom: none;
 }
@@ -117,9 +117,9 @@ img {
     transform: translateX(-50%) rotate(45deg);
     width: 8px;
     height: 8px;
-    border: 1px solid rgba(107, 138, 94, 0.12);
+    border: 1px solid rgba(90, 122, 78, 0.18);
     border-radius: 2px;
-    background: rgba(107, 138, 94, 0.04);
+    background: rgba(90, 122, 78, 0.06);
 }
 
 /* Side pillars */
@@ -132,8 +132,8 @@ img {
     height: calc(100vh - 300px);
     background: linear-gradient(
         180deg,
-        rgba(107, 138, 94, 0.06),
-        rgba(107, 138, 94, 0.02) 50%,
+        rgba(90, 122, 78, 0.1),
+        rgba(90, 122, 78, 0.03) 50%,
         transparent
     );
 }
@@ -317,7 +317,7 @@ img {
     display: flex;
     flex-direction: column;
     padding: 28px 28px 24px;
-    background: linear-gradient(165deg, var(--bg-card) 0%, rgba(107, 138, 94, 0.03) 100%);
+    background: linear-gradient(165deg, var(--bg-card) 0%, rgba(90, 122, 78, 0.04) 100%);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     transition: all var(--transition);
@@ -332,7 +332,7 @@ img {
     position: absolute;
     inset: 0;
     background-image:
-        url("data:image/svg+xml,%3Csvg width='40' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,25 Q20,0 40,25 Q20,50 0,25' fill='none' stroke='%236b8a5e' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
+        url("data:image/svg+xml,%3Csvg width='40' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,25 Q20,0 40,25 Q20,50 0,25' fill='none' stroke='%235a7a4e' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -345,14 +345,14 @@ img {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    box-shadow: inset 0 1px 0 rgba(107, 138, 94, 0.1);
+    box-shadow: inset 0 1px 0 rgba(90, 122, 78, 0.1);
     opacity: 0;
     transition: opacity var(--transition);
     pointer-events: none;
 }
 
 .project-card:hover {
-    background: linear-gradient(165deg, var(--bg-card-hover) 0%, rgba(107, 138, 94, 0.06) 100%);
+    background: linear-gradient(165deg, var(--bg-card-hover) 0%, rgba(90, 122, 78, 0.08) 100%);
     border-color: var(--border-hover);
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
@@ -427,16 +427,16 @@ img {
     height: 6px;
     background: linear-gradient(
         180deg,
-        #3a3228 0%,
-        #2e2720 40%,
-        #251f18 100%
+        #c4a882 0%,
+        #b89b74 40%,
+        #a88d66 100%
     );
     border-radius: 2px;
     position: relative;
     z-index: 2;
     box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .fence-rail::after {
@@ -484,8 +484,8 @@ img {
     height: 28px;
     background: linear-gradient(
         180deg,
-        #3a3228 0%,
-        #2e2720 100%
+        #c4a882 0%,
+        #b89b74 100%
     );
     clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
     position: relative;
@@ -516,12 +516,12 @@ img {
     padding: 32px 16px;
     background: linear-gradient(
         180deg,
-        #342d24 0%,
-        #2a241c 30%,
-        #231e17 100%
+        #c4a882 0%,
+        #b89b74 30%,
+        #ad8f68 100%
     );
-    border-left: 1px solid rgba(255, 255, 255, 0.03);
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
 }
@@ -559,17 +559,17 @@ img {
 .picket:hover .picket-body {
     background: linear-gradient(
         180deg,
-        #3e362b 0%,
-        #342d24 30%,
-        #2a241c 100%
+        #d0b590 0%,
+        #c4a882 30%,
+        #b89b74 100%
     );
 }
 
 .picket:hover .picket-point {
     background: linear-gradient(
         180deg,
-        #3e362b 0%,
-        #342d24 100%
+        #d0b590 0%,
+        #c4a882 100%
     );
 }
 
@@ -578,14 +578,14 @@ img {
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: rgba(60, 40, 20, 0.5);
     position: relative;
     z-index: 1;
 }
 
 .contact-value {
     font-size: 13px;
-    color: var(--text);
+    color: #3a2510;
     font-weight: 500;
     word-break: break-all;
     position: relative;
@@ -618,12 +618,12 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--green-dim);
+    background: var(--green);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--green);
+    background: var(--green-bright);
 }
 
 /* ===== Responsive ===== */
