@@ -106,7 +106,14 @@ a {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
-    transition: box-shadow var(--transition), transform var(--transition);
+    transition: box-shadow var(--transition), transform var(--transition), opacity 0.5s ease, translate 0.5s ease;
+    opacity: 0;
+    translate: 0 24px;
+}
+
+.card.visible {
+    opacity: 1;
+    translate: 0 0;
 }
 
 .card:hover {

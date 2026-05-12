@@ -100,6 +100,22 @@
             <p class="footer-text">&copy; 2026 MD Sahil AK</p>
         </div>
     </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.card').forEach((card, i) => {
+            const siblings = Array.from(card.parentElement.children);
+            card.style.transitionDelay = `${siblings.indexOf(card) * 100}ms`;
+            observer.observe(card);
+        });
+    </script>
 </body>
 
 </html>
