@@ -344,9 +344,14 @@ ol {
     border-bottom: 1px solid var(--border);
 }
 
+
 .stats__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.stat + .stat {
+    border-left: 1px solid var(--border);
 }
 
 .stat {
@@ -357,9 +362,6 @@ ol {
     text-align: center;
 }
 
-.stat + .stat {
-    border-left: 1px solid var(--border);
-}
 
 .stat__value {
     font-size: 1.6rem;
@@ -774,6 +776,11 @@ ol {
 
     .stat:nth-child(n + 3) {
         border-top: 1px solid var(--border);
+    }
+
+    .stat__value {
+        font-size: 1.35rem;
+        white-space: nowrap;
     }
 
     .feature__body {
