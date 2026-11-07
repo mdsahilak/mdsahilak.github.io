@@ -27,6 +27,9 @@ No build, lint, or test commands exist.
   inline `<script>` at the bottom: an `IntersectionObserver` that fades in every `.reveal`
   element (adds `.visible`, staggering siblings via a `--delay` custom property).
 - `styles/index.css` - All styles, driven entirely by CSS custom properties.
+  **Whenever you change it, bump the `?v=` date on its `<link>` in `index.html`.** GitHub
+  Pages lets browsers cache CSS for 4 hours but HTML for only 10 minutes, so without a new
+  URL visitors get the new HTML with stale CSS and the page renders unstyled.
 - `images/` - Project hero images and the `memoji_*` avatars (light/dark swapped with
   `<picture>` + `prefers-color-scheme`; scaled up inside their circle to crop the padding).
 
