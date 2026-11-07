@@ -24,14 +24,18 @@ No build, lint, or test commands exist.
 
 **Single-page static site:**
 - `index.html` - Complete page structure with inline SVG icons. The only JS is a small
-  inline `<script>` at the bottom: an `IntersectionObserver` that fades project cards in
-  (adds `.visible`, with a staggered `transition-delay` per card) as they scroll into view.
+  inline `<script>` at the bottom: an `IntersectionObserver` that fades in every `.reveal`
+  element (adds `.visible`, staggering siblings via a `--delay` custom property).
 - `styles/index.css` - All styles, driven entirely by CSS custom properties.
-- `images/` - Project hero images and the `memoji_*` avatars (the navbar brand logo / favicon).
+- `images/` - Project hero images and the `memoji_*` avatars (light/dark swapped with
+  `<picture>` + `prefers-color-scheme`; scaled up inside their circle to crop the padding).
+- `CV-2025.pdf` - Résumé linked from the navbar; it is the source of truth for page content.
 
-**Page structure:** sticky `.navbar` (just the "Sahil Ak" brand pill) → `main` with
-`.section` bands (Apps, Web) of project `.card`s → `.footer` with round social pills and
-the copyright line. There is no hero, no contact section, and no nav links by design.
+**Page structure:** sticky `.navbar` (brand pill, segmented Work/Experience/About links
+hidden under 768px, Résumé button) → `.hero` (memoji, headline, CTAs, social pills) →
+`.stats` highlight strip → `#work` featured TimeWave `.feature` → `#projects` grid of text
+`.card`s linking to GitHub → `#experience` `.timeline` → `#about` (bio, skill tags,
+education) → `#contact` band → `.footer`.
 
 **Design System** (in CSS `:root`):
 - Mirrors the **TimeWave design system** (timewaveapp.com), whose tokens are exact
@@ -46,6 +50,8 @@ the copyright line. There is no hero, no contact section, and no nav links by de
   capped at `--max-width` (940px).
 - Always use the semantic tokens (`var(--text)`, `var(--bg)`, `var(--border)`, etc.) so all
   appearance variants update automatically; avoid hardcoded hex in component rules.
-- Responsive: cards use `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`, so
-  column count is derived from width (one breakpoint at 768px for section padding).
-- Respects `prefers-reduced-motion` (card fade-in is disabled).
+- Buttons are `.btn` capsules; `.btn--primary` inverts (`--text` fill, `--bg` label).
+- Responsive: cards use `grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))`, so
+  column count is derived from width; one breakpoint at 768px stacks the two-column
+  layouts (feature body, timeline, about) and turns the stats strip into a 2×2 grid.
+- Respects `prefers-reduced-motion` (reveal fade-in and smooth scrolling are disabled).
