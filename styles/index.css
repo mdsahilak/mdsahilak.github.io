@@ -148,20 +148,6 @@ ol {
     font-size: 0.82rem;
 }
 
-.link {
-    color: var(--text);
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: var(--border);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    transition: text-decoration-color var(--transition);
-}
-
-.link:hover {
-    text-decoration-color: var(--text);
-}
-
 .eyebrow {
     font-size: 0.75rem;
     font-weight: 700;
