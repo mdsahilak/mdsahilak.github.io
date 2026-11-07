@@ -29,10 +29,9 @@ No build, lint, or test commands exist.
 - `styles/index.css` - All styles, driven entirely by CSS custom properties.
 - `images/` - Project hero images and the `memoji_*` avatars (light/dark swapped with
   `<picture>` + `prefers-color-scheme`; scaled up inside their circle to crop the padding).
-- `CV-2025.pdf` - Résumé linked from the navbar; it is the source of truth for page content.
 
 **Page structure:** sticky `.navbar` (brand pill, segmented Work/Experience/About links
-hidden under 768px, Résumé button) → `.hero` (memoji, headline, CTAs, social pills) →
+hidden under 768px) → `.hero` (memoji, headline, CTAs, social pills) →
 `.stats` highlight strip → `#work` featured TimeWave `.feature` → `#projects` grid of text
 `.card`s linking to GitHub → `#experience` `.timeline` → `#about` (bio, skill tags,
 education) → `#contact` band → `.footer`.

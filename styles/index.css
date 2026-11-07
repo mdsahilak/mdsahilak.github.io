@@ -640,37 +640,6 @@ ol {
     color: var(--text-secondary);
 }
 
-/* Promotion path: Intern → Engineer → Lead */
-.timeline__steps {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-}
-
-.step {
-    font-size: 0.72rem;
-    font-weight: 600;
-    white-space: nowrap;
-    color: var(--text-secondary);
-    background: var(--accent-light);
-    border: 1px solid var(--border);
-    padding: 4px 12px;
-    border-radius: var(--pill);
-}
-
-.step--current {
-    color: var(--bg);
-    background: var(--text);
-    border-color: var(--text);
-}
-
-.step__sep {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
 /* ===== About ===== */
 .about {
     display: grid;
