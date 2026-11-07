@@ -168,6 +168,7 @@ ol {
 }
 
 .navbar__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -237,6 +238,54 @@ ol {
 .navbar__links a:hover {
     color: var(--text);
     background: var(--accent-light);
+}
+
+/* Wrapper used only by the mobile sheet; on desktop it's layout-transparent. */
+.navbar__menu {
+    display: contents;
+}
+
+/* Hamburger (mobile only): three bars that fold into an X when open. */
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--pill);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.navbar__toggle:hover {
+    background: var(--accent-light);
+}
+
+.navbar__toggle-bar {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 1px;
+    transition: transform 300ms cubic-bezier(0.2, 0.9, 0.25, 1), opacity 160ms ease;
+}
+
+.navbar.is-open .navbar__toggle-bar:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.navbar.is-open .navbar__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.is-open .navbar__toggle-bar:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 /* ===== Hero ===== */
@@ -735,8 +784,107 @@ ol {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+    .navbar__toggle {
+        display: inline-flex;
+    }
+
+    /*
+     * The bar grows downward into a full-width sheet holding the links.
+     * The sheet hangs from the bottom of the sticky navbar (absolute, so the
+     * page underneath never shifts) and opens by animating its grid row from
+     * 0fr to 1fr, i.e. from zero height to the links' natural height.
+     */
+    .navbar__inner {
+        position: static;
+    }
+
+    .navbar__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: grid;
+        grid-template-rows: 0fr;
+        background: var(--bg-secondary);
+        /* Keeps the closed sheet's transparent border from hiding the bar's own bottom line. */
+        background-clip: padding-box;
+        border-bottom: 1px solid transparent;
+        box-shadow: 0 0 0 transparent;
+        transition:
+            grid-template-rows 240ms cubic-bezier(0.4, 0, 0.6, 1),
+            box-shadow 240ms ease,
+            border-color 240ms ease;
+    }
+
+    .navbar.is-open .navbar__menu {
+        grid-template-rows: 1fr;
+        border-bottom-color: var(--border);
+        box-shadow: 0 18px 32px var(--shadow);
+        transition:
+            grid-template-rows 380ms cubic-bezier(0.2, 0.9, 0.25, 1),
+            box-shadow 380ms ease,
+            border-color 380ms ease;
+    }
+
+    /* Clip the links to the growing row; hide them once fully closed. */
     .navbar__links {
-        display: none;
+        min-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 24px;
+        background: none;
+        border: none;
+        border-radius: 0;
+        visibility: hidden;
+        transition: visibility 0s linear 240ms;
+    }
+
+    .navbar.is-open .navbar__links {
+        visibility: visible;
+        transition: visibility 0s;
+    }
+
+    /* Rows separated by hairlines; each drifts in just after the one above. */
+    .navbar__links a {
+        --i: 0;
+        padding: 15px 4px;
+        font-size: 1.05rem;
+        color: var(--text);
+        border-radius: 0;
+        border-top: 1px solid var(--border);
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 120ms ease, transform 180ms ease, color var(--transition);
+    }
+
+    .navbar__links a:last-child {
+        margin-bottom: 8px;
+    }
+
+    .navbar__links a:hover {
+        background: none;
+        color: var(--text-secondary);
+    }
+
+    .navbar.is-open .navbar__links a {
+        opacity: 1;
+        transform: none;
+        transition:
+            opacity 260ms ease calc(80ms + var(--i) * 50ms),
+            transform 340ms cubic-bezier(0.2, 0.9, 0.25, 1) calc(80ms + var(--i) * 50ms),
+            color var(--transition);
+    }
+
+    .navbar__links a:nth-child(2) {
+        --i: 1;
+    }
+
+    .navbar__links a:nth-child(3) {
+        --i: 2;
     }
 
     .hero {
@@ -795,6 +943,21 @@ ol {
 
 /* ===== Motion ===== */
 @media (prefers-reduced-motion: reduce) {
+    .navbar__menu,
+    .navbar.is-open .navbar__menu,
+    .navbar__links,
+    .navbar.is-open .navbar__links,
+    .navbar__links a,
+    .navbar.is-open .navbar__links a {
+        transform: none;
+        transition-duration: 1ms;
+        transition-delay: 0s;
+    }
+
+    .navbar__toggle-bar {
+        transition-duration: 1ms;
+    }
+
     html {
         scroll-behavior: auto;
     }

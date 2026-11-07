@@ -24,8 +24,10 @@ No build, lint, or test commands exist.
 
 **Single-page static site:**
 - `index.html` - Complete page structure with inline SVG icons. The only JS is a small
-  inline `<script>` at the bottom: an `IntersectionObserver` that fades in every `.reveal`
-  element (adds `.visible`, staggering siblings via a `--delay` custom property).
+  inline `<script>` at the bottom that does two things: toggles the mobile menu (adds
+  `.is-open` to `.navbar`, keeps `aria-expanded`/`aria-label` on the hamburger in sync, and
+  closes on link tap, outside tap or Escape), and runs an `IntersectionObserver` that fades
+  in every `.reveal` element (adds `.visible`, staggering siblings via a `--delay` property).
 - `styles/index.css` - All styles, driven entirely by CSS custom properties.
   **Whenever you change it, bump the `?v=` date on its `<link>` in `index.html`.** GitHub
   Pages lets browsers cache CSS for 4 hours but HTML for only 10 minutes, so without a new
@@ -33,8 +35,9 @@ No build, lint, or test commands exist.
 - `images/` - Project hero images and the `memoji_*` avatars (light/dark swapped with
   `<picture>` + `prefers-color-scheme`; scaled up inside their circle to crop the padding).
 
-**Page structure:** sticky `.navbar` (brand pill, segmented Work/Experience/About links
-hidden under 768px) → `.hero` (memoji, headline, CTAs, social pills) →
+**Page structure:** sticky `.navbar` (brand pill, segmented Work/Experience/About links;
+under 768px they collapse behind a `.navbar__toggle` hamburger into a `.navbar__menu` sheet
+that expands down from the bar) → `.hero` (memoji, headline, CTAs, social pills) →
 `.stats` highlight strip → `#work` featured TimeWave `.feature` → `#projects` grid of text
 `.card`s linking to GitHub → `#experience` `.timeline` → `#about` (bio, skill tags,
 education) → `#contact` band → `.footer`.
