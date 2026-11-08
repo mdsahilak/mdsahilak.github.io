@@ -32,12 +32,12 @@ No build, lint, or test commands exist.
   **Whenever you change it, bump the `?v=` date on its `<link>` in `index.html`.** GitHub
   Pages lets browsers cache CSS for 4 hours but HTML for only 10 minutes, so without a new
   URL visitors get the new HTML with stale CSS and the page renders unstyled.
-- `images/` - Project hero images and the `memoji_*` avatars (light/dark swapped with
-  `<picture>` + `prefers-color-scheme`; scaled up inside their circle to crop the padding).
+- `images/` - Project hero images, `sahil.jpg` (the hero avatar photo,
+  pre-cropped square) and `memoji_dark.jpg` (the favicon).
 
-**Page structure:** sticky `.navbar` (brand pill, segmented Work/Experience/About links;
+**Page structure:** sticky `.navbar` (brand pill, segmented Projects/Work/About links, pointing at `#work`/`#experience`/`#about`;
 under 768px they collapse behind a `.navbar__toggle` hamburger into a `.navbar__menu` sheet
-that expands down from the bar) → `.hero` (memoji, headline, CTAs, social pills) →
+that expands down from the bar) → `.hero` (photo, headline, intro line, social icons) →
 `.stats` highlight strip → `#work` featured TimeWave `.feature` → `#projects` grid of text
 `.card`s linking to GitHub → `#experience` `.timeline` → `#about` (bio, skill tags,
 education) → `#contact` band → `.footer`.
