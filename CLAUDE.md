@@ -32,7 +32,7 @@ No build, lint, or test commands exist.
   **Whenever you change it, bump the `?v=` date on its `<link>` in `index.html`.** GitHub
   Pages lets browsers cache CSS for 4 hours but HTML for only 10 minutes, so without a new
   URL visitors get the new HTML with stale CSS and the page renders unstyled.
-- `images/` - Project hero images, `sahil.jpg` (the hero avatar photo,
+- `images/` - Project hero images, `sahil.jpg` (the avatar photo used in the navbar and hero,
   pre-cropped square) and `memoji_dark.jpg` (the favicon).
 
 **Page structure:** sticky `.navbar` (brand pill, segmented Projects/Work/About links, pointing at `#work`/`#experience`/`#about`;

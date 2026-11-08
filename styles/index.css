@@ -181,8 +181,8 @@ ol {
 .navbar__brand {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
-    padding: 0 18px;
+    gap: 10px;
+    padding: 6px 18px 6px 6px;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--pill);
@@ -191,6 +191,15 @@ ol {
 
 .navbar__brand:hover {
     background: var(--accent-light);
+}
+
+.navbar__logo {
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .navbar__name {
