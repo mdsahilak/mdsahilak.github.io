@@ -33,7 +33,8 @@ No build, lint, or test commands exist.
   Pages lets browsers cache CSS for 4 hours but HTML for only 10 minutes, so without a new
   URL visitors get the new HTML with stale CSS and the page renders unstyled.
 - `images/` - Project hero images, `sahil.jpg` (the avatar photo used in the navbar and hero,
-  pre-cropped square) and `memoji_dark.jpg` (the favicon).
+  pre-cropped square) and `favicon.png` (the same photo
+  as a round 128px PNG). The `memoji_*` files are no longer used.
 
 **Page structure:** sticky `.navbar` (brand pill, segmented Projects/Work/About links, pointing at `#work`/`#experience`/`#about`;
 under 768px they collapse behind a `.navbar__toggle` hamburger into a `.navbar__menu` sheet
