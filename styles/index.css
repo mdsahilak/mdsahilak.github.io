@@ -369,6 +369,7 @@ ol {
 .stats__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    border-inline: 1px solid var(--border);
 }
 
 .stat + .stat {
